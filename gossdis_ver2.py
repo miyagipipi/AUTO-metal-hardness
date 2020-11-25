@@ -14,7 +14,7 @@ class metalHardness(object):
 
     def HRA79_85(self):
         print('本函数适合于79.5-85HRA的试样\n')
-        with open(r'D:\金属硬度\正态分布数据.txt','a') as f:
+        with open(r'.\正态分布数据.txt','a') as f:
             i = 1
             while i <= self._nums:
                 v = round(random.normalvariate(self._mean, self._div), 1)
@@ -36,7 +36,7 @@ class metalHardness(object):
         base_max = 3.7
         base_min = 0.062222
 
-        with open(r'D:\金属硬度\正态分布数据.txt','a') as f:
+        with open(r'.\正态分布数据.txt','a') as f:
 
             i = 1
             while i <= self._nums:
@@ -73,7 +73,7 @@ class metalHardness(object):
 
     def HRC59_64(self):
         print('本函数适合于59-64HRC的试样\n')
-        with open(r'D:\金属硬度\正态分布数据.txt','a') as f:
+        with open(r'.\正态分布数据.txt','a') as f:
 
             i = 1
             while i <= self._nums:
@@ -87,9 +87,9 @@ class metalHardness(object):
                     f.write(str(v) + '\t')
                 i += 1
         print('HRA数据已生成，注意在生成新数据时清空记事本！')
-
+'''
 if __name__ == '__main__':
-    print('请输入硬度标准和范围，目前可选的有HRC(59-64)，HRC(22-34)，HRB(60-110)。\n')
+    print('请输入硬度标准和范围，目前可选的有HRC(79-85)，HRC(22-34)，HRC(59-64)。\n')
     print('正确的输入格式为：HRA79_85，HRC22_34和HRC59_64')
 
     hardnessName = input('请输入： ')
@@ -108,3 +108,4 @@ if __name__ == '__main__':
 
     elif hardnessName == 'HRC59_64':
         res = metalHardness(61.7, 1.08, 63.9, 59.0, nums)
+'''
